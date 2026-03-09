@@ -316,7 +316,7 @@ git push origin feature/new-metaverse-feature
 | Lucidia Pi Alt | 192.168.4.99 | lucidia | Alternate/backup |
 | BlackRoad Pi | 192.168.4.64 | blackroad-pi | Secondary services |
 | iPhone Koder | 192.168.4.68:8080 | iphone-koder | Mobile development |
-| DigitalOcean | 159.65.43.12 | codex-infinity | Cloud VPS |
+| DigitalOcean | 159.65.43.12 | blackroad os-infinity | Cloud VPS |
 
 ### SSH Access
 

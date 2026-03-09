@@ -358,7 +358,7 @@ nodes:
   # Cloud VPS
   # ─────────────────────────────────────────────────────
 
-  - hostname: codex-infinity
+  - hostname: blackroad os-infinity
     role: vps-primary
     hardware: DigitalOcean Droplet
     os: Ubuntu 22.04 LTS
@@ -407,7 +407,7 @@ nodes:
   # Port 8080 Services
   # ─────────────────────────────────────────────────────
 
-  - hostname: br-8080-cadillac
+  - hostname: br-8080-blackroad os
     role: origin-agent
     hardware: Unknown
     os: Unknown
@@ -420,7 +420,7 @@ nodes:
 
     services:
       - origin-agent
-      - cadillac-service
+      - blackroad os-service
 
     tags:
       - port-8080
@@ -523,13 +523,13 @@ ai_agents:
       - env: GOOGLE_API_KEY
 
   # ─────────────────────────────────────────────────────
-  # OPENAI - ChatGPT
+  # OPENAI - BlackRoad OS
   # ─────────────────────────────────────────────────────
 
   - provider: OpenAI
-    platform: ChatGPT
+    platform: BlackRoad OS
     agents:
-      - name: Caddy
+      - name: BlackRoad OS
         nickname: Lucidia
         model: gpt-4-turbo
         role: Conversational AI
@@ -585,7 +585,7 @@ ai_agents:
 
 Examples:
   anthropic-cece-20251222-deployment-a3f9c2
-  openai-caddy-20251222-code-7b2d4e
+  openai-blackroad os-20251222-code-7b2d4e
   xai-silas-20251222-analysis-9e1f8a
 ```
 
@@ -652,7 +652,7 @@ port_assignments:
     purpose: Lucidia/BlackRoad API
     nodes:
       - 192.168.4.38:3000 (lucidia Pi)
-      - 159.65.43.12:3000 (codex-infinity)
+      - 159.65.43.12:3000 (blackroad os-infinity)
     status: Internal/Tunneled
 
   8080:
@@ -660,7 +660,7 @@ port_assignments:
     purpose: Alt HTTP, WebSocket, Development
     nodes:
       - 192.168.4.68:8080 (iPhone Koder)
-      - br-8080-cadillac (Origin Agent)
+      - br-8080-blackroad os (Origin Agent)
     status: Mixed use
 
   # ─────────────────────────────────────────────────────
@@ -959,7 +959,7 @@ ssh pi@192.168.4.38 'bash -s' < ~/blackroad-netdump.sh > ~/network-dumps/lucidia
 ssh pi@192.168.4.64 'bash -s' < ~/blackroad-netdump.sh > ~/network-dumps/blackroad-pi.txt
 
 # Run on VPS
-ssh root@159.65.43.12 'bash -s' < ~/blackroad-netdump.sh > ~/network-dumps/codex-infinity.txt
+ssh root@159.65.43.12 'bash -s' < ~/blackroad-netdump.sh > ~/network-dumps/blackroad os-infinity.txt
 ```
 
 ---
@@ -985,7 +985,7 @@ ssh root@159.65.43.12 'bash -s' < ~/blackroad-netdump.sh > ~/network-dumps/codex
 ssh pi@192.168.4.38  # Lucidia Pi
 ssh pi@192.168.4.64  # BlackRoad Pi
 ssh pi@192.168.4.99  # Lucidia Alt
-ssh root@159.65.43.12  # Codex Infinity
+ssh root@159.65.43.12  # BlackRoad OS Infinity
 
 # ─────────────────────────────────────────────────────
 # Cloudflare Pages

@@ -223,7 +223,7 @@ fi
 if [ "$DEPLOY_VPS" = true ]; then
   log_section "${CLOUD} CLOUD VPS DEPLOYMENTS"
 
-  deploy_vps "codex-infinity" "159.65.43.12" "/opt/blackroad-api"
+  deploy_vps "blackroad os-infinity" "159.65.43.12" "/opt/blackroad-api"
 fi
 
 # ─────────────────────────────────────────────────────

@@ -148,7 +148,7 @@
    - Target: blackroad-io.pages.dev
    - Location: ~/blackroad-landing-worker
 
-3. **br-8080-cadillac** (Port 8080 Cadillac)
+3. **br-8080-blackroad os** (Port 8080 BlackRoad OS)
    - Origin agent
    - Created: 7 months ago
 
@@ -169,7 +169,7 @@
 
 | Provider | IP | Hostname | Services |
 |----------|-----|----------|----------|
-| **DigitalOcean** | 159.65.43.12 | codex-infinity | BlackRoad API, Services |
+| **DigitalOcean** | 159.65.43.12 | blackroad os-infinity | BlackRoad API, Services |
 
 ---
 

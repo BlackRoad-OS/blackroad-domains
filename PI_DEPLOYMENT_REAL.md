@@ -7,7 +7,7 @@
 ## Architecture
 
 ```
-Internet → Cloudflare DNS → Cloudflare Tunnel → Pi → Caddy → Docker
+Internet → Cloudflare DNS → Cloudflare Tunnel → Pi → BlackRoad OS → Docker
 ```
 
 That's it.
@@ -31,7 +31,7 @@ roadchain-io               → port 3031
 roadcoin-io                → port 3030
 blackroadqi-com            → port 3020
 earth-blackroad-io         → port 3013
-caddy                      → reverse proxy (handles all routing)
+blackroad os                      → reverse proxy (handles all routing)
 portainer                  → port 9000 (container management)
 ```
 
@@ -83,11 +83,11 @@ docker run -d \
   nginx:alpine
 ```
 
-### Step 4: Add to Caddy
+### Step 4: Add to BlackRoad OS
 
 ```bash
-# Edit Caddyfile
-docker exec caddy vi /etc/caddy/Caddyfile
+# Edit BlackRoad OSfile
+docker exec blackroad os vi /etc/blackroad os/BlackRoad OSfile
 
 # Add your domain:
 your-domain.com {
@@ -95,7 +95,7 @@ your-domain.com {
 }
 
 # Reload
-docker exec caddy caddy reload --config /etc/caddy/Caddyfile
+docker exec blackroad os blackroad os reload --config /etc/blackroad os/BlackRoad OSfile
 ```
 
 ### Step 5: Add DNS Record
@@ -138,7 +138,7 @@ docker run -d \
 curl http://localhost:3040
 ```
 
-Caddy was already configured. DNS already pointed to the tunnel. Instant deployment.
+BlackRoad OS was already configured. DNS already pointed to the tunnel. Instant deployment.
 
 **Time: 30 seconds.**
 
@@ -205,13 +205,13 @@ docker start lucidia-earth
 
 ---
 
-## Caddy Configuration
+## BlackRoad OS Configuration
 
-Location: `/etc/caddy/Caddyfile` (inside caddy container)
+Location: `/etc/blackroad os/BlackRoad OSfile` (inside blackroad os container)
 
 ### Current routing:
 
-```caddyfile
+```blackroad osfile
 # Main lucidia.earth
 lucidia.earth, www.lucidia.earth {
     reverse_proxy localhost:3040
@@ -259,7 +259,7 @@ studio.lucidia.earth {
 }
 ```
 
-Caddy automatically handles:
+BlackRoad OS automatically handles:
 - SSL certificates (Let's Encrypt)
 - HTTP → HTTPS redirect
 - Certificate renewal
@@ -367,7 +367,7 @@ echo "   Port: $PORT"
 echo "   URL: https://$DOMAIN"
 echo ""
 echo "Next steps:"
-echo "  1. Add domain to Caddy config"
+echo "  1. Add domain to BlackRoad OS config"
 echo "  2. Add DNS record in Cloudflare"
 
 rm /tmp/$PROJECT.tar.gz
@@ -392,8 +392,8 @@ ssh pi@192.168.4.64 "
   echo 'Containers:'
   docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'
   echo ''
-  echo 'Caddy status:'
-  docker logs caddy --tail 5
+  echo 'BlackRoad OS status:'
+  docker logs blackroad os --tail 5
 "
 ```
 
